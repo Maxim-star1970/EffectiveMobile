@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Устанавливаем Google Chrome (без ошибок с пробелами в URL)
+# Устанавливаем Google Chrome
 RUN wget -q https://dl.google.com/linux/linux_signing_key.pub -O /tmp/google_signing_key.pub \
     && echo "deb [arch=amd64 signed-by=/tmp/google_signing_key.pub] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list \
     && apt-get update \
